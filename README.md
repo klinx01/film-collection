@@ -34,5 +34,3 @@ To create a production build, run:
 ng build
 
 The build artifacts will be stored in the dist/ directory.
-
-GitHub: https://github.com/klinx01
