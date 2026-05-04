@@ -32,6 +32,14 @@ export class BreadcrumbsComponent implements OnInit {
       return;
     }
 
+    if (url === '/about') {
+      this.breadcrumbs.set([
+        { label: 'Home', path: '/' },
+        { label: 'About' }
+      ]);
+      return;
+    }
+
     if (url.startsWith('/films/')) {
       const id: number = Number(url.replace('/films/', ''));
       const film: IFilm | undefined = this.filmsService.getFilmById(id);

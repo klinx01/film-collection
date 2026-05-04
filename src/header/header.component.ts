@@ -12,6 +12,7 @@ export class HeaderComponent {
 
   navigations: INavigation[] = [
     { id: 'home', name: 'Home', path: '/' },
+    { id: 'about', name: 'About', path: '/about' }
   ];
 
 }
