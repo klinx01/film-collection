@@ -1,0 +1,35 @@
+<section class="catalog-section">
+  <div class="container">
+    <div class="catalog-header">
+      <h1 class="catalog-title fw-700 fs-32">Film Collection</h1>
+      <p class="catalog-subtitle fw-400 fs-16">Discover and save your favorite movies</p>
+    </div>
+    <div class="search-wrapper">
+      <input
+        appAutofocus
+        class="search-input fs-16"
+        type="text"
+        placeholder="Search films by title..."
+        [ngModel]="searchQuery()"
+        (ngModelChange)="onSearch($event)"
+      >
+    </div>
+    @if (filteredFilms()) {
+      <div class="films-grid">
+        @for (film of filteredFilms(); track film.id) {
+          <app-film-card
+            [film]="film"
+            (toggleFavorite)="onToggleFavorite($event)"
+            (cardClick)="onCardClick($event)"
+          >
+          </app-film-card>
+        }
+      </div>
+    } @else {
+      <div class="nothing-found">
+        <p class="nothing-found-text fw-600 fs-18">Nothing found</p>
+        <p class="nothing-found-hint fw-400 fs-14">Try a different search query</p>
+      </div>
+    }
+  </div>
+</section>

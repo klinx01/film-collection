@@ -1,0 +1,47 @@
+.background-header {
+  background-color: var(--header-bg-color);
+  border-bottom: 1px solid var(--border-color);
+  width: 100%;
+}
+
+.header-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+
+  .app-name {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    .app-name-text {
+      color: var(--primary-text-color);
+      letter-spacing: 1px;
+    }
+  }
+
+  .navigation {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    a {
+      color: var(--secondary-text-color);
+      text-decoration: none;
+      padding: 8px 16px;
+      border-radius: 6px;
+      transition: color 0.2s, background-color 0.2s;
+
+      &:hover {
+        color: var(--primary-text-color);
+        background-color: var(--card-hover-color);
+      }
+    }
+
+    .active-link {
+      color: var(--accent-color) !important;
+      background-color: var(--accent-bg-color) !important;
+    }
+  }
+}

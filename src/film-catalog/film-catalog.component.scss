@@ -1,0 +1,66 @@
+.catalog-section {
+  padding: 40px 0 60px;
+  min-height: calc(100vh - 200px);
+
+  .catalog-header {
+    margin-bottom: 32px;
+
+    .catalog-title {
+      color: var(--primary-text-color);
+      margin-bottom: 8px;
+    }
+
+    .catalog-subtitle {
+      color: var(--secondary-text-color);
+    }
+  }
+
+  .search-wrapper {
+    position: relative;
+    margin-bottom: 36px;
+    max-width: 480px;
+
+    .search-input {
+      width: 100%;
+      padding: 14px 48px 14px 18px;
+      border-radius: 10px;
+      border: 1px solid var(--border-color);
+      background-color: var(--card-bg-color);
+      color: var(--primary-text-color);
+      outline: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
+
+      &::placeholder {
+        color: var(--secondary-text-color);
+      }
+
+      &:focus {
+        border-color: var(--accent-color);
+        box-shadow: 0 0 0 3px var(--accent-bg-color);
+      }
+    }
+  }
+
+  .films-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
+
+  .nothing-found {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 0;
+    gap: 12px;
+
+    .nothing-found-text {
+      color: var(--primary-text-color);
+    }
+
+    .nothing-found-hint {
+      color: var(--secondary-text-color);
+    }
+  }
+}

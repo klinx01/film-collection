@@ -1,0 +1,56 @@
+@use './fonts';
+@use './normalize';
+
+* {
+  font-family: 'Nunito Sans', 'Segoe UI', sans-serif;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --bg-color: #0f1117;
+  --header-bg-color: #161b27;
+  --breadcrumbs-bg-color: #131720;
+  --card-bg-color: #1c2333;
+  --card-hover-color: #242d42;
+  --btn-bg-color: #1c2333;
+  --border-color: #2a3347;
+
+  --primary-text-color: #f0f4ff;
+  --secondary-text-color: #8a99b8;
+
+  --accent-color: #6c8cff;
+  --accent-bg-color: rgba(108, 140, 255, 0.12);
+
+  --favorite-btn-active-bg: rgba(220, 80, 100, 0.15);
+  --favorite-btn-active-color: #f87096;
+  --favorite-btn-active-border: rgba(220, 80, 100, 0.4);
+  --favorite-btn-active-hover: rgba(220, 80, 100, 0.25);
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--primary-text-color);
+}
+
+.container {
+  display: block;
+  width: 1200px;
+  margin: auto;
+}
+
+.fs-12 { font-size: 12px; }
+.fs-13 { font-size: 13px; }
+.fs-14 { font-size: 14px; }
+.fs-15 { font-size: 15px; }
+.fs-16 { font-size: 16px; }
+.fs-18 { font-size: 18px; }
+.fs-20 { font-size: 20px; }
+.fs-24 { font-size: 24px; }
+.fs-32 { font-size: 32px; }
+
+.fw-400 { font-weight: 400; }
+.fw-600 { font-weight: 600; }
+.fw-700 { font-weight: 700; }
+.fw-800 { font-weight: 800; }

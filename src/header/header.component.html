@@ -1,0 +1,21 @@
+<div class="background-header">
+  <header class="container">
+    <div class="header-wrapper">
+      <div class="app-name">
+        <span class="app-name-text fw-700 fs-20">Film Collection</span>
+      </div>
+      <nav class="navigation fs-16 fw-600">
+        @for (nav of navigations; track nav.id) {
+          <a
+            [id]="nav.id"
+            routerLinkActive="active-link"
+            [routerLink]="nav.path"
+            [routerLinkActiveOptions]="{ exact: true }"
+          >
+            {{ nav.name }}
+          </a>
+        }
+      </nav>
+    </div>
+  </header>
+</div>

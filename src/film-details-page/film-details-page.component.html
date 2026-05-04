@@ -1,0 +1,49 @@
+<section class="details-section">
+  <div class="container">
+    @if (film()) {
+      <div class="details-wrapper">
+        <div class="details-poster-col">
+          <img class="details-poster" [src]="film()!.posterUrl" [alt]="film()!.title">
+        </div>
+        <div class="details-info-col">
+          <div class="details-meta">
+            <span class="details-genre fs-13 fw-600">{{ film()!.genre }}</span>
+            <span class="details-year fs-14 fw-400">{{ film()!.year }}</span>
+          </div>
+          <h1 class="details-title fw-700 fs-32">{{ film()!.title }}</h1>
+          <div class="details-stats">
+            <div class="stat-item">
+              <span class="stat-label fw-400 fs-13">Rating</span>
+              <span class="stat-value fw-700 fs-18">⭐ {{ film()!.rating }}</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-label fw-400 fs-13">Duration</span>
+              <span class="stat-value fw-700 fs-18">🕐 {{ film()!.duration | duration }}</span>
+            </div>
+          </div>
+          <div class="details-description">
+            <h2 class="description-title fw-700 fs-18">Description</h2>
+            <p class="description-text fw-400 fs-16">{{ film()!.description }}</p>
+          </div>
+          <div class="details-actions">
+            <button class="back-btn fw-600 fs-15" (click)="onBack()">
+              ← Back to Catalog
+            </button>
+            <button
+              class="favorite-btn fw-600 fs-15"
+              [class.favorite-btn--active]="film()!.isFavorite"
+              (click)="onToggleFavorite()"
+            >
+              {{ film()!.isFavorite ? '❤️ In Favorites' : '🤍 Add to Favorites' }}
+            </button>
+          </div>
+        </div>
+      </div>
+    } @else {
+      <div class="not-found">
+        <p class="fw-600 fs-18">Film not found</p>
+        <button class="back-btn fw-600 fs-15" (click)="onBack()">← Back to Catalog</button>
+      </div>
+    }
+  </div>
+</section>

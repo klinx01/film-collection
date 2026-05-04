@@ -1,0 +1,18 @@
+<div class="breadcrumbs-wrapper">
+  <div class="container">
+    <nav class="breadcrumbs fs-14">
+      @for (crumb of breadcrumbs(); track crumb.label; let isLast = $last) {
+          <a
+            class="breadcrumb-link fw-600"
+            [routerLink]="crumb.path"
+          >
+          {{ crumb.label }}
+          </a>
+          @if (!isLast) {
+            <span class="breadcrumb-separator">></span>
+          }
+        }
+    </nav>
+  </div>
+</div>
+

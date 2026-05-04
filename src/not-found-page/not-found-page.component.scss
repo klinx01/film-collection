@@ -1,0 +1,39 @@
+.not-found-section {
+  padding: 80px 0;
+
+  .not-found-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    text-align: center;
+
+    .not-found-code {
+      font-size: 96px;
+      color: var(--accent-color);
+      line-height: 1;
+    }
+
+    .not-found-title {
+      color: var(--primary-text-color);
+    }
+
+    .not-found-hint {
+      color: var(--secondary-text-color);
+    }
+
+    .back-home-btn {
+      margin-top: 8px;
+      padding: 12px 24px;
+      border-radius: 8px;
+      background-color: var(--accent-color);
+      color: #fff;
+      text-decoration: none;
+      transition: opacity 0.2s;
+
+      &:hover {
+        opacity: 0.85;
+      }
+    }
+  }
+}

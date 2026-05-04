@@ -1,0 +1,25 @@
+<div class="film-card" (click)="onCardClick()">
+  <div class="film-poster-wrapper">
+    <img class="film-poster" [src]="film().posterUrl" [alt]="film().title">
+    <div class="film-rating fw-700 fs-14">
+      ⭐ {{ film().rating }}
+    </div>
+    @if (film().isFavorite) {
+      <div class="favorite-badge">❤️</div>
+    }
+  </div>
+  <div class="film-info">
+    <div class="film-meta">
+      <span class="film-genre fs-12 fw-600">{{ film().genre }}</span>
+      <span class="film-year fs-12 fw-400">{{ film().year }}</span>
+    </div>
+    <h3 class="film-title fs-16 fw-700">{{ film().title }}</h3>
+    <button
+      class="favorite-btn fw-600 fs-13"
+      [class.favorite-btn--active]="film().isFavorite"
+      (click)="onToggleFavorite()"
+    >
+      {{ film().isFavorite ? '❤️ In Favorites' : '🤍 Add to Favorites' }}
+    </button>
+  </div>
+</div>
